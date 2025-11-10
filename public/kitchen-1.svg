@@ -1,0 +1,57 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Modern Kitchen Background -->
+  <rect width="800" height="600" fill="#f8fafc"/>
+  
+  <!-- Counter/Cabinets -->
+  <rect x="0" y="400" width="800" height="200" fill="#334155"/>
+  <rect x="0" y="380" width="800" height="20" fill="#475569"/>
+  
+  <!-- Upper Cabinets -->
+  <rect x="50" y="100" width="200" height="250" fill="#1e293b" rx="4"/>
+  <rect x="280" y="100" width="200" height="250" fill="#1e293b" rx="4"/>
+  <rect x="510" y="100" width="200" height="250" fill="#1e293b" rx="4"/>
+  
+  <!-- Cabinet Handles -->
+  <rect x="140" y="210" width="20" height="4" fill="#94a3b8" rx="2"/>
+  <rect x="370" y="210" width="20" height="4" fill="#94a3b8" rx="2"/>
+  <rect x="600" y="210" width="20" height="4" fill="#94a3b8" rx="2"/>
+  
+  <!-- Stove/Cooktop -->
+  <circle cx="200" cy="470" r="30" fill="#1e293b"/>
+  <circle cx="300" cy="470" r="30" fill="#1e293b"/>
+  <circle cx="400" cy="470" r="30" fill="#1e293b"/>
+  <circle cx="500" cy="470" r="30" fill="#1e293b"/>
+  
+  <!-- Oven -->
+  <rect x="550" y="420" width="180" height="140" fill="#0f172a" rx="8"/>
+  <rect x="570" y="440" width="140" height="100" fill="#1e293b" rx="4"/>
+  <circle cx="700" cy="470" r="8" fill="#3b82f6"/>
+  
+  <!-- Sink Area -->
+  <ellipse cx="120" cy="450" rx="70" ry="40" fill="#64748b"/>
+  <ellipse cx="120" cy="450" rx="60" ry="35" fill="#475569"/>
+  
+  <!-- Wall Tiles Pattern -->
+  <g opacity="0.3">
+    <line x1="0" y1="120" x2="800" y2="120" stroke="#cbd5e1" stroke-width="2"/>
+    <line x1="0" y1="180" x2="800" y2="180" stroke="#cbd5e1" stroke-width="2"/>
+    <line x1="0" y1="240" x2="800" y2="240" stroke="#cbd5e1" stroke-width="2"/>
+    <line x1="0" y1="300" x2="800" y2="300" stroke="#cbd5e1" stroke-width="2"/>
+    <line x1="0" y1="360" x2="800" y2="360" stroke="#cbd5e1" stroke-width="2"/>
+  </g>
+  
+  <!-- Lighting (pendant lights) -->
+  <line x1="150" y1="50" x2="150" y2="80" stroke="#94a3b8" stroke-width="2"/>
+  <circle cx="150" cy="90" r="15" fill="#fbbf24" opacity="0.8"/>
+  
+  <line x1="380" y1="50" x2="380" y2="80" stroke="#94a3b8" stroke-width="2"/>
+  <circle cx="380" cy="90" r="15" fill="#fbbf24" opacity="0.8"/>
+  
+  <line x1="610" y1="50" x2="610" y2="80" stroke="#94a3b8" stroke-width="2"/>
+  <circle cx="610" cy="90" r="15" fill="#fbbf24" opacity="0.8"/>
+  
+  <!-- Text Watermark -->
+  <text x="400" y="580" font-family="Arial, sans-serif" font-size="16" fill="#64748b" text-anchor="middle" opacity="0.5">
+    Professional Kitchen Setup
+  </text>
+</svg>

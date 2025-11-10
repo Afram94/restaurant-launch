@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: 255 255 255;
+    --foreground: 15 23 42;
+    --accent: 59 130 246;
+    --accent-dark: 37 99 235;
+    --secondary: 234 88 12;
+    --tertiary: 16 185 129;
+    --muted: 100 116 139;
+    --border: 226 232 240;
+    --dark-bg: 15 23 42;
+    --dark-surface: 30 41 59;
+  }
+
+  body {
+    background-color: rgb(var(--background));
+    color: rgb(var(--foreground));
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
