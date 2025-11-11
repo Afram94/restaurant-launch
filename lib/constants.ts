@@ -4,8 +4,8 @@
 
 export const SITE_CONFIG = {
   name: 'Nordic Kitchen Solutions',
-  tagline: 'Complete restaurant setups in collaboration with HELUX',
-  contactEmail: 'hello@nordickitchensolutions.se',
+  tagline: 'Complete Launch Partner — Physical Setup + Digital Presence',
+  contactEmail: 'hello@restaurantlaunch.se',
   phone: '+46 (0)11 123 4567',
   address: 'Norrköping, Sweden',
   heluxUrl: 'https://heluxab.se',
@@ -19,6 +19,7 @@ export const NAV_LINKS = [
 ] as const;
 
 export const PROJECT_TYPES = [
+  'Complete Package (Physical + Digital)',
   'New Restaurant',
   'Renovation',
   'Café',
@@ -53,23 +54,23 @@ export const FEATURES = [
 export const STEPS = [
   {
     number: 1,
-    title: 'Book a free consultation',
-    description: 'Tell us about your vision and we will assess your needs.',
+    title: 'Free Consultation',
+    description: 'We discuss both physical setup AND digital needs for your complete launch.',
   },
   {
     number: 2,
-    title: 'We design your setup (with HELUX)',
-    description: 'Our team creates a complete plan including equipment, layout, and interiors.',
+    title: 'Design & Planning',
+    description: 'Kitchen layout + website/booking system design — complete solution planning.',
   },
   {
     number: 3,
-    title: 'Delivery & installation',
-    description: 'Professional installation and coordination with all trades.',
+    title: 'Installation',
+    description: 'Equipment setup + digital platform launch — coordinated implementation.',
   },
   {
     number: 4,
-    title: 'Open your doors!',
-    description: 'We hand over a turnkey kitchen ready for service.',
+    title: 'Grand Opening',
+    description: 'Ready to serve customers in-person AND online — launch ready everywhere.',
   },
 ] as const;
 

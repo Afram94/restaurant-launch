@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { SmoothScroll } from "@/components/smooth-scroll";
+import { PageTransition } from "@/components/page-transition";
 import { SITE_CONFIG } from "@/lib/constants";
 
 const inter = Inter({
@@ -14,27 +15,30 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: `${SITE_CONFIG.name} | Complete Restaurant Setups in Sweden`,
-    template: `%s | ${SITE_CONFIG.name}`,
+    default: `Nordic Kitchen Solutions - Complete Restaurant Launch Partner`,
+    template: `%s | Nordic Kitchen Solutions`,
   },
   description:
-    "Complete restaurant setups, kitchen design, and interiors in collaboration with HELUX Storkök & Inredningar AB. From concept to opening day.",
+    "From kitchen equipment to your website — complete restaurant launch solutions across Sweden. Physical setup + digital presence in one package. Based in Norrköping.",
   keywords: [
+    "restaurant launch",
     "restaurant setup",
     "commercial kitchen",
-    "kitchen design",
-    "restaurant equipment",
+    "restaurant website",
+    "online booking system",
     "HELUX",
     "Sweden",
     "Norrköping",
+    "digital presence",
+    "complete package",
   ],
   authors: [{ name: SITE_CONFIG.name }],
   openGraph: {
     type: "website",
     locale: "sv_SE",
-    title: `${SITE_CONFIG.name} | Complete Restaurant Setups`,
+    title: `Nordic Kitchen Solutions - Complete Restaurant Launch Partner`,
     description:
-      "Complete restaurant setups from concept to opening day. Kitchen design, equipment, and interiors.",
+      "From kitchen equipment to your website — complete restaurant launch solutions. Physical setup + digital presence in one package.",
     siteName: SITE_CONFIG.name,
   },
 };
@@ -49,7 +53,9 @@ export default function RootLayout({
       <body className="font-sans">
         <SmoothScroll />
         <Navbar />
-        <main>{children}</main>
+        <main>
+          <PageTransition>{children}</PageTransition>
+        </main>
         <Footer />
       </body>
     </html>

@@ -15,7 +15,7 @@ export function ContactPanel({ className = '' }: ContactPanelProps) {
     email: '',
     phone: '',
     city: '',
-    projectType: 'New Restaurant',
+    projectType: 'Complete Package (Physical + Digital)',
     message: '',
   });
   const [copied, setCopied] = useState(false);

@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { Container } from '@/components/container';
 import { Section } from '@/components/section';
 import { SITE_CONFIG } from '@/lib/constants';
-import { CheckCircle2, Phone, Award, Shield, Users, Sparkles, Zap, Target, ExternalLink } from 'lucide-react';
+import { CheckCircle2, Phone, Award, Shield, Users, Sparkles, Zap, Target, ExternalLink, Check, ArrowRight } from 'lucide-react';
 import { fadeInUp, staggerContainer } from '@/lib/motion';
 
 const VALUES = [
@@ -125,7 +125,7 @@ export default function AboutPage() {
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-blue-500"></span>
               </span>
               <span className="text-sm font-medium text-blue-200">
-                Your Restaurant Setup Partner
+                Complete Restaurant Launch Partner
               </span>
             </motion.div>
 
@@ -134,11 +134,11 @@ export default function AboutPage() {
               variants={fadeInUp}
               className="mb-6 max-w-5xl text-5xl font-bold leading-tight tracking-tight text-white sm:text-6xl lg:text-7xl"
             >
-              We Transform Your{' '}
+              One Partner for Your{' '}
               <span className="bg-gradient-to-r from-blue-400 via-emerald-400 to-purple-400 bg-clip-text text-transparent">
-                Restaurant Dreams
+                Complete Launch
               </span>{' '}
-              Into Reality
+              — Physical + Digital
             </motion.h1>
 
             {/* Subtitle */}
@@ -146,7 +146,8 @@ export default function AboutPage() {
               variants={fadeInUp}
               className="mb-12 max-w-3xl text-xl leading-relaxed text-blue-100 sm:text-2xl"
             >
-              From concept to grand opening, we're the complete solution for restaurant owners across Sweden. Premium equipment, expert design, flawless execution.
+              From kitchen equipment (via HELUX) to your website and booking system — we coordinate everything 
+              so you have one contact for your complete restaurant launch.
             </motion.p>
 
             {/* Stats Grid */}
@@ -234,29 +235,29 @@ export default function AboutPage() {
               </div>
               
               <h2 className="mb-6 text-4xl font-bold text-gray-900 sm:text-5xl">
-                Making Restaurant Dreams{' '}
+                Your Complete Launch{' '}
                 <span className="bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">
-                  Effortless
+                  Coordinator
                 </span>
               </h2>
               
               <div className="space-y-6 text-lg leading-relaxed text-gray-600">
                 <p className="text-xl font-medium text-gray-900">
-                  Opening a restaurant shouldn't be overwhelming. We make it simple.
+                  Opening a restaurant requires both physical setup AND digital presence. We handle both.
                 </p>
                 <p>
-                  Between permits, equipment sourcing, contractor coordination, and interior design, 
-                  launching a restaurant can feel impossible. That's where we come in.
+                  Most restaurant owners struggle with managing multiple vendors: equipment suppliers, 
+                  contractors, web developers, and marketing agencies. That's overwhelming.
                 </p>
                 <p>
                   Based in <span className="font-semibold text-gray-900">{SITE_CONFIG.address}</span>, 
-                  we provide <span className="font-semibold text-gray-900">complete restaurant setups</span> from 
-                  initial consultation through opening day. We handle everything: kitchen planning, 
-                  equipment procurement, interior design, and project management.
+                  we provide <span className="font-semibold text-gray-900">complete restaurant launch coordination</span>: 
+                  physical setup through our HELUX partnership + digital services from our tech expertise. 
+                  One contact, complete solution.
                 </p>
                 <p>
-                  Our partnership with <span className="font-semibold text-blue-600">HELUX Storkök & Inredningar AB</span> gives 
-                  us access to premium commercial kitchen equipment and deep expertise in professional kitchen design.
+                  We coordinate with <span className="font-semibold text-blue-600">HELUX Storkök & Inredningar AB</span> for 
+                  premium equipment and interiors, while building your website, booking system, and online presence.
                 </p>
               </div>
 
@@ -331,6 +332,255 @@ export default function AboutPage() {
               </motion.div>
             </motion.div>
           </div>
+        </Container>
+      </Section>
+
+      {/* NEW: Why Work With Us Instead of Going Direct? */}
+      <Section className="bg-gradient-to-b from-white to-slate-50">
+        <Container>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="mb-16 text-center"
+          >
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-100 to-emerald-100 px-6 py-2">
+              <Target className="h-4 w-4 bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent" />
+              <span className="text-sm font-semibold bg-gradient-to-r from-blue-700 to-emerald-700 bg-clip-text text-transparent">
+                The Nordic Kitchen Solutions Advantage
+              </span>
+            </div>
+            <h2 className="mb-6 text-4xl font-bold text-slate-900 sm:text-5xl">
+              Why Work With{' '}
+              <span className="bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">
+                Nordic Kitchen Solutions
+              </span>
+              ?
+            </h2>
+            <p className="mx-auto max-w-3xl text-xl text-slate-600">
+              Get HELUX's premium equipment AND complete digital services — one partner, complete solution
+            </p>
+          </motion.div>
+
+          {/* Comparison Grid */}
+          <div className="grid gap-8 lg:grid-cols-3 lg:gap-6">
+            {/* Going Direct to HELUX */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="rounded-2xl border-2 border-slate-200 bg-white p-8"
+            >
+              <div className="mb-6">
+                <div className="mb-4 inline-flex items-center gap-2 text-slate-600">
+                  <div className="h-8 w-8 rounded-lg bg-slate-100 flex items-center justify-center">
+                    <span className="text-lg">🏭</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-slate-900">Direct to HELUX</h3>
+                </div>
+                <p className="text-sm text-slate-500">What you get going straight to the supplier</p>
+              </div>
+              
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <div className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-100">
+                    <Check className="h-3.5 w-3.5 text-emerald-600" strokeWidth={3} />
+                  </div>
+                  <span className="text-slate-700">Professional equipment</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-100">
+                    <Check className="h-3.5 w-3.5 text-emerald-600" strokeWidth={3} />
+                  </div>
+                  <span className="text-slate-700">Installation services</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-slate-100">
+                    <span className="text-slate-400 text-lg leading-none">—</span>
+                  </div>
+                  <span className="text-slate-400">No website or digital presence</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-slate-100">
+                    <span className="text-slate-400 text-lg leading-none">—</span>
+                  </div>
+                  <span className="text-slate-400">No booking system setup</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-slate-100">
+                    <span className="text-slate-400 text-lg leading-none">—</span>
+                  </div>
+                  <span className="text-slate-400">No SEO or marketing foundation</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-slate-100">
+                    <span className="text-slate-400 text-lg leading-none">—</span>
+                  </div>
+                  <span className="text-slate-400">Manage multiple vendors yourself</span>
+                </li>
+              </ul>
+
+              <div className="mt-8 text-sm text-slate-500">
+                <strong className="text-slate-700">Great for:</strong> Equipment-only needs
+              </div>
+            </motion.div>
+
+            {/* Nordic Kitchen Solutions - HIGHLIGHTED */}
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="relative rounded-2xl border-2 border-emerald-400 bg-gradient-to-br from-emerald-50 via-blue-50 to-white p-8 shadow-2xl shadow-emerald-200/50"
+            >
+              {/* Best Choice Badge */}
+              <div className="absolute -right-3 -top-3 z-10 rounded-full bg-gradient-to-r from-blue-600 to-emerald-600 px-4 py-2 text-xs font-bold text-white shadow-xl">
+                ⭐ Recommended
+              </div>
+
+              <div className="mb-6">
+                <div className="mb-4 inline-flex items-center gap-2">
+                  <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-blue-600 to-emerald-600 flex items-center justify-center">
+                    <Sparkles className="h-4 w-4 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-slate-900">Nordic Kitchen Solutions</h3>
+                </div>
+                <p className="text-sm font-semibold bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">
+                  Complete package — Physical + Digital
+                </p>
+              </div>
+              
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <div className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-100">
+                    <Check className="h-3.5 w-3.5 text-emerald-600" strokeWidth={3} />
+                  </div>
+                  <span className="font-medium text-slate-900">HELUX equipment (coordinated)</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-100">
+                    <Check className="h-3.5 w-3.5 text-emerald-600" strokeWidth={3} />
+                  </div>
+                  <span className="font-medium text-slate-900">HELUX installation (coordinated)</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-blue-100">
+                    <Sparkles className="h-3.5 w-3.5 text-blue-600" />
+                  </div>
+                  <span className="font-medium text-slate-900">Modern restaurant website</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-blue-100">
+                    <Sparkles className="h-3.5 w-3.5 text-blue-600" />
+                  </div>
+                  <span className="font-medium text-slate-900">Online booking system</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-blue-100">
+                    <Sparkles className="h-3.5 w-3.5 text-blue-600" />
+                  </div>
+                  <span className="font-medium text-slate-900">Google SEO & local search setup</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-blue-100">
+                    <Sparkles className="h-3.5 w-3.5 text-blue-600" />
+                  </div>
+                  <span className="font-medium text-slate-900">Single point of contact</span>
+                </li>
+              </ul>
+
+              <div className="mt-8 rounded-xl bg-gradient-to-r from-blue-600 to-emerald-600 p-4 text-center">
+                <p className="text-sm font-bold text-white">
+                  Same equipment + Digital services included
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Multiple Vendors */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="rounded-2xl border-2 border-slate-200 bg-white p-8"
+            >
+              <div className="mb-6">
+                <div className="mb-4 inline-flex items-center gap-2 text-slate-600">
+                  <div className="h-8 w-8 rounded-lg bg-slate-100 flex items-center justify-center">
+                    <span className="text-lg">🔧</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-slate-900">Multiple Vendors</h3>
+                </div>
+                <p className="text-sm text-slate-500">Managing equipment + digital separately</p>
+              </div>
+              
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <div className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-100">
+                    <Check className="h-3.5 w-3.5 text-emerald-600" strokeWidth={3} />
+                  </div>
+                  <span className="text-slate-700">Equipment from supplier</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-100">
+                    <Check className="h-3.5 w-3.5 text-emerald-600" strokeWidth={3} />
+                  </div>
+                  <span className="text-slate-700">Website from web agency</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-orange-100">
+                    <span className="text-orange-600 text-xs font-bold">⚠</span>
+                  </div>
+                  <span className="text-slate-700">Juggle multiple contacts</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-orange-100">
+                    <span className="text-orange-600 text-xs font-bold">⚠</span>
+                  </div>
+                  <span className="text-slate-700">Coordinate timelines yourself</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-orange-100">
+                    <span className="text-orange-600 text-xs font-bold">⚠</span>
+                  </div>
+                  <span className="text-slate-700">Higher total costs</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-orange-100">
+                    <span className="text-orange-600 text-xs font-bold">⚠</span>
+                  </div>
+                  <span className="text-slate-700">More stress, longer timelines</span>
+                </li>
+              </ul>
+
+              <div className="mt-8 text-sm text-slate-500">
+                <strong className="text-slate-700">Risk:</strong> Delays & coordination headaches
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Bottom CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="mt-12 text-center"
+          >
+            <p className="mb-6 text-lg text-slate-600">
+              <strong className="text-slate-900">Smart choice:</strong> Get HELUX's equipment quality + our digital expertise in one package
+            </p>
+            <a
+              href="/#contact"
+              className="group inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-blue-600 to-emerald-600 px-8 py-4 text-lg font-bold text-white shadow-xl shadow-blue-500/25 transition-all hover:scale-105 hover:shadow-emerald-500/40"
+            >
+              <Sparkles className="h-5 w-5 transition-transform group-hover:rotate-12" />
+              Get Your Complete Package
+              <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </a>
+          </motion.div>
         </Container>
       </Section>
 
@@ -494,19 +744,19 @@ export default function AboutPage() {
                   </li>
                   <li className="flex items-start gap-3 text-gray-600">
                     <CheckCircle2 className="h-5 w-5 shrink-0 text-gray-900" />
-                    <span>Kitchen layout and flow design</span>
+                    <span>Kitchen layout and flow design coordination</span>
                   </li>
                   <li className="flex items-start gap-3 text-gray-600">
                     <CheckCircle2 className="h-5 w-5 shrink-0 text-gray-900" />
-                    <span>Interior design and furniture</span>
+                    <span>Interior design and furniture coordination</span>
                   </li>
                   <li className="flex items-start gap-3 text-gray-600">
                     <CheckCircle2 className="h-5 w-5 shrink-0 text-gray-900" />
-                    <span>Permit applications</span>
+                    <span>Digital presence setup (website, booking, SEO)</span>
                   </li>
                   <li className="flex items-start gap-3 text-gray-600">
                     <CheckCircle2 className="h-5 w-5 shrink-0 text-gray-900" />
-                    <span>Contractor coordination</span>
+                    <span>Permit applications & contractor coordination</span>
                   </li>
                 </ul>
               </motion.div>

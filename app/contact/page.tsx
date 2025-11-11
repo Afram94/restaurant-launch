@@ -122,6 +122,110 @@ export default function ContactPage() {
         </div>
       </section>
 
+      {/* NEW: Complete Package Callout */}
+      <Section className="bg-gradient-to-b from-white to-slate-50">
+        <Container>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="relative overflow-hidden rounded-3xl border-2 border-emerald-300 bg-gradient-to-br from-emerald-50 via-blue-50 to-white p-8 shadow-2xl shadow-emerald-200/50 sm:p-12"
+          >
+            {/* Decorative Badge */}
+            <div className="absolute -right-6 -top-6 z-10 rotate-12 rounded-2xl bg-gradient-to-r from-blue-600 to-emerald-600 px-6 py-3 shadow-2xl">
+              <p className="text-sm font-bold text-white">✨ Complete Package</p>
+            </div>
+
+            <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
+              {/* Left: Text Content */}
+              <div>
+                <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-100 to-emerald-100 px-5 py-2">
+                  <CheckCircle2 className="h-4 w-4 text-emerald-700" />
+                  <span className="text-sm font-bold bg-gradient-to-r from-blue-700 to-emerald-700 bg-clip-text text-transparent">
+                    What You Get
+                  </span>
+                </div>
+
+                <h2 className="mb-4 text-3xl font-bold text-slate-900 sm:text-4xl">
+                  Physical Setup +{' '}
+                  <span className="bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">
+                    Digital Services
+                  </span>
+                </h2>
+
+                <p className="mb-6 text-lg text-slate-600">
+                  Unlike going direct to equipment suppliers, you get a complete solution: HELUX's premium equipment PLUS our digital expertise.
+                </p>
+
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-100">
+                      <CheckCircle2 className="h-4 w-4 text-blue-600" strokeWidth={3} />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-slate-900">Professional equipment & installation</p>
+                      <p className="text-sm text-slate-600">Via our HELUX partnership</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-100">
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600" strokeWidth={3} />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-slate-900">Complete digital presence</p>
+                      <p className="text-sm text-slate-600">Website, booking system, SEO, marketing</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-purple-100">
+                      <CheckCircle2 className="h-4 w-4 text-purple-600" strokeWidth={3} />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-slate-900">One coordinator, complete solution</p>
+                      <p className="text-sm text-slate-600">No juggling multiple vendors</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Right: Visual Stats */}
+              <div className="flex flex-col justify-center gap-4">
+                <div className="rounded-2xl border-2 border-blue-200 bg-white p-6 shadow-lg">
+                  <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-blue-700 shadow-lg">
+                    <span className="text-2xl">🏭</span>
+                  </div>
+                  <h3 className="mb-2 text-xl font-bold text-slate-900">Physical Setup</h3>
+                  <p className="text-slate-600">
+                    Equipment, interiors, installation — coordinated through HELUX partnership
+                  </p>
+                </div>
+
+                <div className="rounded-2xl border-2 border-emerald-200 bg-white p-6 shadow-lg">
+                  <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-600 to-green-600 shadow-lg">
+                    <span className="text-2xl">💻</span>
+                  </div>
+                  <h3 className="mb-2 text-xl font-bold text-slate-900">Digital Presence</h3>
+                  <p className="text-slate-600">
+                    Website, booking, SEO, social media — built by our tech team
+                  </p>
+                </div>
+
+                <div className="rounded-2xl bg-gradient-to-r from-blue-600 to-emerald-600 p-6 text-center shadow-xl">
+                  <p className="text-sm font-medium text-blue-100">Complete launch package from</p>
+                  <p className="text-3xl font-bold text-white">300,000 SEK</p>
+                  <p className="text-sm text-emerald-200">Everything included</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Decorative elements */}
+            <div className="absolute -left-12 -top-12 h-48 w-48 rounded-full bg-blue-400/10 blur-3xl" />
+            <div className="absolute -bottom-12 -right-12 h-48 w-48 rounded-full bg-emerald-400/10 blur-3xl" />
+          </motion.div>
+        </Container>
+      </Section>
+
       {/* Contact Form & Info - Redesigned */}
       <Section className="bg-white">
         <Container>

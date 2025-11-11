@@ -158,13 +158,7 @@ export function Navbar() {
                 <div className="flex items-center justify-between border-b border-gray-200 bg-gradient-to-r from-blue-50 to-emerald-50 p-6">
                   <div className="flex items-center gap-2">
                     <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-blue-600 to-emerald-500 shadow-lg">
-                      <svg
-                        viewBox="0 0 40 40"
-                        className="h-4 w-4 text-white"
-                        fill="currentColor"
-                      >
-                        <path d="M8 8h10v24H8V8zm14 0h10v10H22V8zm0 14h10v10H22V22z" />
-                      </svg>
+                      <Sparkles className="h-4 w-4 text-white" />
                     </div>
                     <span className="text-lg font-bold text-gray-900">
                       Menu

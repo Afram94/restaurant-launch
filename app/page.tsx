@@ -107,10 +107,10 @@ export default function HomePage() {
                 </div>
                 <div className="flex flex-col">
                   <div className="text-3xl font-bold tracking-tight text-white">
-                    Nordic Kitchen
+                    Nordic Kitchen Solutions
                   </div>
                   <div className="text-sm font-medium tracking-wider text-blue-100">
-                    SOLUTIONS
+                    COMPLETE LAUNCH PARTNER
                   </div>
                 </div>
               </div>
@@ -185,10 +185,10 @@ export default function HomePage() {
               variants={heroItem}
               className="mb-6 max-w-5xl text-5xl font-bold leading-tight tracking-tight text-white sm:text-6xl lg:text-7xl"
             >
-              Transform Your Restaurant Dream{' '}
+              Launch Your Complete Restaurant{' '}
               <span className="relative inline-block">
                 <span className="bg-gradient-to-r from-blue-400 via-emerald-400 to-purple-400 bg-clip-text text-transparent">
-                  Into Reality
+                  Physical + Digital
                 </span>
                 <motion.div
                   initial={{ scaleX: 0 }}
@@ -208,8 +208,8 @@ export default function HomePage() {
               variants={heroItem}
               className="mb-10 max-w-3xl text-xl leading-relaxed text-blue-100 sm:text-2xl"
             >
-              From concept to grand opening — complete kitchen setups, premium equipment, 
-              and stunning interiors. <span className="font-semibold text-white">Powered by HELUX</span>.
+              From kitchen design to website launch — we handle equipment, interiors, AND your 
+              online presence. <span className="font-semibold text-white">One partner, complete solution</span>.
             </motion.p>
 
             {/* Stats Bar */}
@@ -271,12 +271,12 @@ export default function HomePage() {
               <div className="h-1 w-1 rounded-full bg-blue-400"></div>
               <div className="flex items-center gap-2">
                 <Award className="h-5 w-5 text-emerald-400" />
-                <span>Expert Design</span>
+                <span>Digital Services Included</span>
               </div>
               <div className="h-1 w-1 rounded-full bg-blue-400"></div>
               <div className="flex items-center gap-2">
                 <Award className="h-5 w-5 text-emerald-400" />
-                <span>Turnkey Solutions</span>
+                <span>Complete Solutions</span>
               </div>
             </motion.div>
           </motion.div>
@@ -336,6 +336,165 @@ export default function HomePage() {
         </Container>
       </Section>
 
+      {/* What's Included - Complete Package */}
+      <Section className="bg-gradient-to-b from-gray-50 to-white">
+        <Container>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="mb-16 text-center"
+          >
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-emerald-100 px-6 py-2">
+              <Sparkles className="h-4 w-4 text-emerald-700" />
+              <span className="text-sm font-semibold text-emerald-700">
+                Complete Restaurant Package
+              </span>
+            </div>
+            <h2 className="mb-4 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
+              Everything You Need to{' '}
+              <span className="bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">
+                Open AND Succeed Online
+              </span>
+            </h2>
+            <p className="mx-auto max-w-2xl text-xl text-slate-600">
+              We handle both the physical setup and your digital presence — one partner for your complete launch.
+            </p>
+          </motion.div>
+
+          <div className="grid gap-8 lg:grid-cols-2">
+            {/* Physical Setup Card */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="group relative overflow-hidden rounded-3xl border-2 border-blue-200 bg-gradient-to-br from-blue-50 to-white p-8 shadow-xl shadow-blue-100/50 transition-all hover:shadow-2xl hover:shadow-blue-200/50 sm:p-10"
+            >
+              <div className="relative z-10">
+                <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-600 to-blue-700 shadow-lg shadow-blue-500/30">
+                  <ChefHat className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="mb-4 text-3xl font-bold text-slate-900">Physical Setup</h3>
+                <p className="mb-6 text-slate-600">
+                  Complete kitchen and interior solutions through our partnership with HELUX
+                </p>
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3">
+                    <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-100">
+                      <Award className="h-4 w-4 text-blue-600" />
+                    </div>
+                    <span className="text-slate-700">Professional kitchen equipment (HELUX)</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-100">
+                      <Award className="h-4 w-4 text-blue-600" />
+                    </div>
+                    <span className="text-slate-700">Custom interior design & furnishing</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-100">
+                      <Award className="h-4 w-4 text-blue-600" />
+                    </div>
+                    <span className="text-slate-700">Installation & setup coordination</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-100">
+                      <Award className="h-4 w-4 text-blue-600" />
+                    </div>
+                    <span className="text-slate-700">Health & safety compliance</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-100">
+                      <Award className="h-4 w-4 text-blue-600" />
+                    </div>
+                    <span className="text-slate-700">Warranty & ongoing support</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="absolute right-0 top-0 h-64 w-64 -translate-y-32 translate-x-32 rounded-full bg-blue-400/10 blur-3xl transition-transform group-hover:scale-110" />
+            </motion.div>
+
+            {/* Digital Presence Card - Highlighted */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="group relative overflow-hidden rounded-3xl border-2 border-emerald-300 bg-gradient-to-br from-emerald-50 via-green-50 to-white p-8 shadow-xl shadow-emerald-200/50 transition-all hover:shadow-2xl hover:shadow-emerald-300/50 sm:p-10"
+            >
+              {/* "Our Expertise" Badge */}
+              <div className="absolute right-6 top-6 z-20 rounded-full bg-gradient-to-r from-emerald-600 to-green-600 px-4 py-1.5 text-xs font-bold text-white shadow-lg">
+                ✨ Our Expertise
+              </div>
+
+              <div className="relative z-10">
+                <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-600 to-green-600 shadow-lg shadow-emerald-500/30">
+                  <Sparkles className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="mb-4 text-3xl font-bold text-slate-900">Digital Presence</h3>
+                <p className="mb-6 text-slate-600">
+                  Complete online infrastructure to attract and serve your customers digitally
+                </p>
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3">
+                    <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-100">
+                      <Award className="h-4 w-4 text-emerald-600" />
+                    </div>
+                    <span className="text-slate-700">Modern restaurant website</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-100">
+                      <Award className="h-4 w-4 text-emerald-600" />
+                    </div>
+                    <span className="text-slate-700">Online booking/reservation system</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-100">
+                      <Award className="h-4 w-4 text-emerald-600" />
+                    </div>
+                    <span className="text-slate-700">Google Business & SEO setup</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-100">
+                      <Award className="h-4 w-4 text-emerald-600" />
+                    </div>
+                    <span className="text-slate-700">Digital menu system (QR codes)</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-100">
+                      <Award className="h-4 w-4 text-emerald-600" />
+                    </div>
+                    <span className="text-slate-700">Social media foundation & email marketing</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="absolute right-0 top-0 h-64 w-64 -translate-y-32 translate-x-32 rounded-full bg-emerald-400/10 blur-3xl transition-transform group-hover:scale-110" />
+            </motion.div>
+          </div>
+
+          {/* CTA Button */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="mt-12 text-center"
+          >
+            <Link
+              href="/#contact"
+              onClick={handleContactClick}
+              className="group inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-blue-600 to-emerald-600 px-10 py-5 text-lg font-bold text-white shadow-2xl shadow-blue-500/25 transition-all hover:scale-105 hover:shadow-emerald-500/40"
+            >
+              <Sparkles className="h-5 w-5 transition-transform group-hover:rotate-12" />
+              Get Your Complete Package
+              <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </motion.div>
+        </Container>
+      </Section>
+
       {/* Powered by HELUX - Redesigned */}
       <Section className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800">
         {/* Animated gradient orbs */}
@@ -383,10 +542,12 @@ export default function HomePage() {
               </motion.div>
               
               <h2 className="mb-4 text-3xl font-bold text-white sm:text-4xl">
-                Powered by HELUX
+                Equipment Partner: HELUX
               </h2>
               <p className="mb-6 text-lg leading-relaxed text-blue-100">
-                We partner with <span className="font-semibold text-white">HELUX Storkök & Inredningar AB</span>, Sweden's trusted name in professional kitchen equipment and interiors since 2012.
+                We've partnered with <span className="font-semibold text-white">HELUX Storkök & Inredningar AB</span> to bring you Sweden's 
+                highest quality equipment. We manage the entire relationship — you work with us, 
+                we coordinate with HELUX for the best pricing and service.
               </p>
               <a
                 href={SITE_CONFIG.heluxUrl}
@@ -394,7 +555,7 @@ export default function HomePage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-lg bg-white px-6 py-3 text-base font-medium text-blue-700 shadow-lg transition-all hover:bg-blue-50 hover:shadow-xl active:scale-95"
               >
-                Learn more about HELUX
+                See Our Equipment Partner
                 <ExternalLink size={16} />
               </a>
             </div>
@@ -537,14 +698,14 @@ export default function HomePage() {
             </div>
 
             <h2 className="mb-6 text-4xl font-bold text-white sm:text-5xl lg:text-6xl">
-              Ready to Open Your{' '}
+              Ready to Launch Your{' '}
               <span className="bg-gradient-to-r from-orange-300 via-red-300 to-pink-300 bg-clip-text text-transparent">
-                Dream Restaurant?
+                Complete Restaurant?
               </span>
             </h2>
             
             <p className="mb-10 text-xl text-gray-300 sm:text-2xl">
-              Get a free consultation and personalized quote. Our experts are ready to help you succeed.
+              Get a free consultation for your complete package — physical setup + digital presence. Our experts handle everything.
             </p>
             
             <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
@@ -608,7 +769,7 @@ export default function HomePage() {
                 </span>
               </h2>
               <p className="mx-auto max-w-2xl text-xl text-slate-600">
-                Fill out the form below and our team will get back to you within 24 hours with a detailed response.
+                Interested in our complete package? Let us know in your message below. We'll get back to you within 24 hours.
               </p>
             </motion.div>
             
