@@ -3,9 +3,9 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Phone, Sparkles, ChevronRight } from 'lucide-react';
-import { NAV_LINKS, SITE_CONFIG } from '@/lib/constants';
+import { AnimatePresence } from 'framer-motion';
+import { Menu, X } from 'lucide-react';
+import { NAV_LINKS } from '@/lib/constants';
 import { Container } from './container';
 
 export function Navbar() {
@@ -35,24 +35,19 @@ export function Navbar() {
 
   return (
     <>
-      <motion.nav
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.3 }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled
-            ? 'bg-white/95 backdrop-blur-xl shadow-lg shadow-gray-900/5 border-b border-gray-100'
-            : 'bg-white/80 backdrop-blur-md'
+      <nav
+        className={`fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 transition-shadow duration-200 ${
+          isScrolled ? 'shadow-sm' : ''
         }`}
       >
         <Container>
-          <div className="flex items-center justify-between py-4 lg:py-5">
-            {/* Logo with Geometric Icon */}
+          <div className="flex items-center justify-between h-16 lg:h-20">
+            {/* Logo */}
             <Link
               href="/"
-              className="group flex items-center gap-2.5"
+              className="flex items-center gap-2.5 transition-opacity duration-200 hover:opacity-90"
             >
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-emerald-500 shadow-lg shadow-blue-500/25 transition-transform group-hover:scale-110 lg:h-10 lg:w-10">
+              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-blue-600 shadow-sm lg:h-10 lg:w-10">
                 <svg
                   viewBox="0 0 40 40"
                   className="h-5 w-5 text-white lg:h-6 lg:w-6"
@@ -62,111 +57,74 @@ export function Navbar() {
                 </svg>
               </div>
               <div className="flex flex-col">
-                <span className="text-lg font-bold tracking-tight text-gray-900 lg:text-xl">
+                <span className="text-xl font-bold text-gray-900">
                   Nordic Kitchen
                 </span>
-                <span className="text-[10px] font-medium tracking-wide text-gray-500 lg:text-xs">
+                <span className="text-xs font-medium text-gray-600">
                   SOLUTIONS
                 </span>
               </div>
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden items-center gap-1 lg:flex">
+            <div className="hidden items-center gap-8 lg:flex">
               {NAV_LINKS.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`relative px-4 py-2 text-sm font-semibold transition-colors ${
+                  className={`px-6 py-2 text-sm font-medium transition-colors duration-200 ${
                     pathname === link.href
                       ? 'text-blue-600'
                       : 'text-gray-700 hover:text-blue-600'
                   }`}
                 >
                   {link.label}
-                  {pathname === link.href && (
-                    <motion.div
-                      layoutId="navbar-indicator"
-                      className="absolute bottom-0 left-0 right-0 h-0.5 rounded-full bg-gradient-to-r from-blue-600 to-emerald-500"
-                      transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                    />
-                  )}
                 </Link>
               ))}
             </div>
 
-            {/* Desktop CTA Buttons */}
-            <div className="hidden items-center gap-3 lg:flex">
-              <a
-                href={`tel:${SITE_CONFIG.phone.replace(/\s/g, '')}`}
-                className="group flex items-center gap-2 rounded-xl border-2 border-gray-200 bg-white px-4 py-2 text-sm font-semibold text-gray-700 transition-all hover:border-blue-300 hover:bg-blue-50 hover:text-blue-600"
-              >
-                <Phone className="h-4 w-4 transition-transform group-hover:rotate-12" />
-                <span className="hidden xl:inline">{SITE_CONFIG.phone}</span>
-                <span className="xl:hidden">Call Us</span>
-              </a>
+            {/* Desktop CTA Button */}
+            <div className="hidden lg:block">
               <Link
                 href="/#contact"
                 onClick={handleContactClick}
-                className="group flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-emerald-500 px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-blue-500/25 transition-all hover:scale-105 hover:shadow-blue-500/40"
+                className="inline-block rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-blue-700"
               >
-                Free Consultation
-                <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                Kontakta Oss
               </Link>
             </div>
 
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="relative rounded-xl border-2 border-gray-200 bg-white p-2.5 text-gray-900 transition-all hover:border-blue-300 hover:bg-blue-50 lg:hidden"
+              className="rounded-lg border border-gray-300 bg-white p-2 text-gray-700 transition-colors duration-200 hover:bg-gray-50 lg:hidden"
               aria-label="Toggle menu"
             >
-              <motion.div
-                animate={{ rotate: isMobileMenuOpen ? 90 : 0 }}
-                transition={{ duration: 0.2 }}
-              >
-                {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
-              </motion.div>
+              {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
           </div>
         </Container>
-      </motion.nav>
+      </nav>
 
       {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <>
             {/* Overlay */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
+            <div
               onClick={() => setIsMobileMenuOpen(false)}
-              className="fixed inset-0 z-40 bg-gray-900/60 backdrop-blur-sm lg:hidden"
+              className="fixed inset-0 z-40 bg-black/20 backdrop-blur-sm lg:hidden"
             />
 
             {/* Menu Panel */}
-            <motion.div
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '100%' }}
-              transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-              className="fixed right-0 top-0 bottom-0 z-50 w-full max-w-sm bg-white shadow-2xl lg:hidden"
-            >
+            <div className="fixed right-0 top-0 bottom-0 z-50 w-full max-w-sm bg-white shadow-xl border-l border-gray-200 lg:hidden">
               <div className="flex h-full flex-col">
                 {/* Header */}
-                <div className="flex items-center justify-between border-b border-gray-200 bg-gradient-to-r from-blue-50 to-emerald-50 p-6">
-                  <div className="flex items-center gap-2">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-blue-600 to-emerald-500 shadow-lg">
-                      <Sparkles className="h-4 w-4 text-white" />
-                    </div>
-                    <span className="text-lg font-bold text-gray-900">
-                      Menu
-                    </span>
-                  </div>
+                <div className="flex items-center justify-between border-b border-gray-200 bg-white p-6">
+                  <span className="text-lg font-bold text-gray-900">Menu</span>
                   <button
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="rounded-lg p-2 text-gray-900 transition-colors hover:bg-white/50"
+                    className="rounded-lg p-2 text-gray-600 hover:bg-gray-100"
                     aria-label="Close menu"
                   >
                     <X size={24} />
@@ -176,69 +134,34 @@ export function Navbar() {
                 {/* Links */}
                 <div className="flex-1 overflow-y-auto p-6">
                   <div className="space-y-2">
-                    {NAV_LINKS.map((link, index) => (
-                      <motion.div
+                    {NAV_LINKS.map((link) => (
+                      <Link
                         key={link.href}
-                        initial={{ opacity: 0, x: 20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: index * 0.1 }}
+                        href={link.href}
+                        className={`block px-4 py-3 rounded-lg text-base font-medium transition-colors ${
+                          pathname === link.href
+                            ? 'bg-blue-50 text-blue-600'
+                            : 'text-gray-700 hover:bg-gray-50'
+                        }`}
                       >
-                        <Link
-                          href={link.href}
-                          className={`group flex items-center justify-between rounded-xl px-4 py-3.5 text-base font-semibold transition-all ${
-                            pathname === link.href
-                              ? 'bg-gradient-to-r from-blue-500 to-emerald-500 text-white shadow-lg shadow-blue-500/25'
-                              : 'text-gray-700 hover:bg-gray-100'
-                          }`}
-                        >
-                          {link.label}
-                          <ChevronRight className={`h-5 w-5 transition-transform group-hover:translate-x-1 ${
-                            pathname === link.href ? 'text-white' : 'text-gray-400'
-                          }`} />
-                        </Link>
-                      </motion.div>
+                        {link.label}
+                      </Link>
                     ))}
                   </div>
-
-                  {/* Quick Contact Card */}
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.4 }}
-                    className="mt-8 rounded-2xl border-2 border-blue-200 bg-gradient-to-br from-blue-50 to-emerald-50 p-6"
-                  >
-                    <div className="mb-3 flex items-center gap-2">
-                      <Phone className="h-5 w-5 text-blue-600" />
-                      <span className="text-sm font-bold text-gray-900">Quick Call</span>
-                    </div>
-                    <a
-                      href={`tel:${SITE_CONFIG.phone.replace(/\s/g, '')}`}
-                      className="block text-xl font-bold text-blue-600 hover:text-blue-700"
-                    >
-                      {SITE_CONFIG.phone}
-                    </a>
-                    <p className="mt-2 text-xs text-gray-600">
-                      Mon-Fri • 8:00-17:00
-                    </p>
-                  </motion.div>
                 </div>
 
                 {/* CTA */}
-                <div className="border-t border-gray-200 bg-gray-50 p-6">
+                <div className="border-t border-gray-200 bg-white p-6">
                   <Link
                     href="/#contact"
                     onClick={handleContactClick}
-                    className="flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-emerald-500 px-6 py-4 text-center text-base font-bold text-white shadow-xl shadow-blue-500/25 transition-all active:scale-95"
+                    className="block w-full px-6 py-3 text-center rounded-lg bg-blue-600 text-white text-base font-semibold hover:bg-blue-700 transition-colors"
                   >
-                    Free Consultation
-                    <Sparkles className="h-5 w-5" />
+                    Kontakta Oss
                   </Link>
-                  <p className="mt-3 text-center text-xs text-gray-500">
-                    24h Response • No Obligation
-                  </p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </>
         )}
       </AnimatePresence>
